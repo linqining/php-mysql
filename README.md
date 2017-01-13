@@ -4,3 +4,4 @@
 student表中分别有id,name,jidian,sex(enum('w','m')),classid;
 users表中分别有id,name,pwd;
 把这些文件放到localhost文件夹，就可以了；
+用notepad++编译php文件；
