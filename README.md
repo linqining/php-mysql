@@ -5,3 +5,4 @@
 <br>3.users表中分别有`id,name,pwd`;</br>
 <br>4.把这些文件放到localhost文件夹，就可以了；</br>
 <br>5.用notepad++编译php文件；</br>
+<br>![](https://github.com/6688jingtian/php-mysql/raw/master/images/one.png)</br>
