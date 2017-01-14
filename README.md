@@ -17,3 +17,4 @@
 <br>3.users表中分别有`id,name,pwd`;</br>
 <br>4.把这些文件放到localhost文件夹，就可以了；</br>
 <br>5.用notepad++编译php文件；</br>
+<br>6.百度一下，你就知道；</br>
