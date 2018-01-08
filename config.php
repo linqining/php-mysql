@@ -1,4 +1,4 @@
-<?php//数据库公共配置文件
+<?php//閰嶇疆鏂囦欢
 const HOST='localhost';
 const USER='root';
 const PASS='';
