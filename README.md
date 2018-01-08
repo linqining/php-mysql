@@ -12,9 +12,8 @@
 ##简介：
 <br>界面漂亮，但功能较简单，浏览界面可实现对数据的增删改查，查询可高级查询，用到了limit语句，剩余所有链接指向首页，可用作大三下数据库课设，哈哈哈...</br>
 ##部署方法：
-<br>1.建议使用集成开发环境wampserver，此款软件便于运行php文件，需要在MySQL中建两个表，一个表是student（学生表），另一个表是users（用户表）;</br>
+<br>1.建议使用集成开发环境wampserver，此款软件便于运行php文件，数据库名为gd01，需要在MySQL中建两个表，一个表是student（学生表），另一个表是users（用户表，其中需要填写账号name和密码pwd，否则无法登陆）;</br>
 <br>2.student表中分别有`id,name,jidian,sex(enum('w','m')),classid`;</br>
 <br>3.users表中分别有`id,name,pwd`;</br>
 <br>4.把这些文件放到localhost文件夹，就可以了；</br>
-<br>5.用notepad++编译php文件；</br>
-<br>6.百度一下，你就知道；</br>
+<br>5.主要编译工具建议用集成开发环境WampServer，能够直接一步到位；这个80端口号有可能被占用了，可以改成8080端口什么的，建议多百度一下</br>
