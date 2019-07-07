@@ -1,40 +1,60 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
-<head runat="server">
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-    <title>后台管理登录界面</title>
-    <link href="css/alogin.css" rel="stylesheet" type="text/css" />
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>成绩管理系统</title>
+<link href="css/style.css" rel="stylesheet"/>
+<link href="css/response.css" rel="stylesheet"/>
 </head>
-<body>
-    <form id="form1" runat="server" action="useraction.php?a=login" method="post">
-    <div class="Main">
-        <ul>
-            <li class="top"></li>
-            <li class="top2"></li>
-            <li class="topA"></li>
-            <li class="topB"><span><img src="images/login/xiaohui.jpg" alt="" style="" /></span></li>
-            <li class="topC"></li>
-            <li class="topD">
-                <ul class="login">
-                    <li><span class="left login-text">账号：</span> <span style="left">
-                        <input id="Text1" type="text" class="txt" name="username"/>  
-                     
-                    </span></li>
-                    <li><span class="left login-text">密码：</span> <span style="left">
-                       <input id="Text2" type="password" class="txt" name="pwd" />  
-                    </span></li>
-					
-                </ul>
-            </li>
-            <li class="topE"></li>
-            <li class="middle_A"></li>
-            <li class="middle_B"></li>
-            <li class="middle_C"><span class="btn"><input name="" type="image" src="images/login/btnlogin.gif" /></span></li>
-            <li class="middle_D"></li>
-            <li class="bottom_A"></li>
-            <li class="bottom_B">系统登录界面</li>
-        </ul>
-    </div>
-    </form>
+<body class="login-reg-bg">
+<div class="content">
+	<div class="header">
+		<div class="header-nei">
+			<h2 class="header-title">成绩管理系统</h2>
+		</div>
+	</div>
+	<!--head/-->
+	<div class="head-height">&nbsp;</div>
+	<!--登录校验在 style.js文件里面-->
+	<div class="login-reg">
+        <form id="form1" runat="server" action="useraction.php?a=login" method="post">
+            <div class="log-reg-list">
+                <label><i class="iconfont">&#xe60a;</i></label>
+                <input type="text" class="log-reg-text check-tel" placeholder="手机号" value="13796533665" />
+                <em></em>
+            </div>
+            <div class="log-reg-list">
+                <label style="font-size:2.2rem; line-height:40px;"><i class="iconfont">&#xe60f;</i></label>
+                <input type="password" class="log-reg-text check-pwd" placeholder="密码" value="123456" />
+            </div>
+            <div class="log-reg-sub">
+                <a href="javascript:;" class="log-reg-btn login-btn">登录</a>
+            </div>
+        </form>
+	</div>
+	<!--login-reg/-->
+</div>
+<!--content/-->
+<div class="bg100"></div>
+<!--错误提示-->
+<div class="tip-errors-bg">
+	<div class="tip-tip-box-nei">
+		<strong><i class="iconfont">&#xe614;</i><em class="errors">错误提示</em></strong>
+	</div>
+	<!--tip-tip-box/-->
+</div>
+<!--tip-success-bg/-->
+<!--正确提示-->
+<div class="tip-success-bg">
+	<div class="tip-tip-box-nei">
+		<strong><i class="iconfont" style="color:#0F0;">&#xe611;</i><em class="success">正确提示</em></strong>
+	</div>
+	<!--tip-tip-box/-->
+</div>
+<!--tip-success-bg/-->
+<script src="js/jquery.min.js"></script>
+<script src="js/style.js"></script>
 </body>
 </html>

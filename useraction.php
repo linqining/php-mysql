@@ -1,5 +1,5 @@
 <?php
-//ÅäÖÃÎÄ¼þ³£Á¿ÉùÃ÷
+//ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 const HOST='localhost';
 const USER='root';
 const PASS='';
@@ -7,41 +7,41 @@ const DBNAME='gd01';
 session_start();
 switch($_GET['a'])
         {
-		   case 'login'://µÇÂ¼²Ù×÷
-		   $name=$_POST['username'];//½ÓÊÕ´«¹ýÀ´µÄÐÅÏ¢
+		   case 'login'://ï¿½ï¿½Â¼ï¿½ï¿½ï¿½ï¿½
+		   $name=$_POST['username'];//ï¿½ï¿½ï¿½Õ´ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ï¢
 		   $pwd=$_POST['pwd'];
 		  
-		  //1.µ¼ÈëÅäÖÃÎÄ¼þ
+		  //1.ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ä¼ï¿½
 		  require("config.php");
-		  //2.Á¬½ÓÊý¾Ý¿â²¢ÅÐ¶Ï
+		  //2.ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿â²¢ï¿½Ð¶ï¿½
 		  $link=mysql_connect(HOST,USER,PASS);
 		  if(!$link){
-			  die("Êý¾Ý¿âÁ¬½ÓÊ§°Ü£¡");
+			  die("ï¿½ï¿½ï¿½Ý¿ï¿½ï¿½ï¿½ï¿½ï¿½Ê§ï¿½Ü£ï¿½");
 		  }
-		  //3.Ñ¡ÔñÊý¾Ý¿â²¢ÉèÖÃ×Ö·û¼¯
+		  //3.Ñ¡ï¿½ï¿½ï¿½ï¿½ï¿½Ý¿â²¢ï¿½ï¿½ï¿½ï¿½ï¿½Ö·ï¿½ï¿½ï¿½
 		  mysql_select_db(DBNAME);
 		  mysql_set_charset('utf8');
-		  //4.¶¨ÒåsqlÓï¾ä²¢Ö´ÐÐ
+		  //4.ï¿½ï¿½ï¿½ï¿½sqlï¿½ï¿½ä²¢Ö´ï¿½ï¿½
 		  $sql="select * from users where name={$name}";
 		  $result=mysql_query($sql);
 		  if(mysql_num_rows($result)>0){
 			$user=mysql_fetch_assoc($result);
 			if($user['pwd']==$pwd){
-				//½«µÇÂ¼ÐÅÏ¢´æµ½sessionÀï
+				//ï¿½ï¿½ï¿½ï¿½Â¼ï¿½ï¿½Ï¢ï¿½æµ½sessionï¿½ï¿½
 				$_SESSION['adminuser']=$user;
-			header("Location:index.php");
+			header("Location:index3.php");
 			}
 			else{
-			header("Location:login.php");
+			header("Location:login2.php");
 			}
 			}else{
-			header("Location:login.php");
+			header("Location:login2.php");
 			}
 			break;
 			
-			case 'logout'://×¢Ïú
-			unset($_SESSION['adminuer']);//ÒÆ³ýµÇÂ¼ÐÅÏ¢£¨ÊÍ·Å£©
-			header('Location:login.php');
+			case 'logout'://×¢ï¿½ï¿½
+			unset($_SESSION['adminuer']);//ï¿½Æ³ï¿½ï¿½ï¿½Â¼ï¿½ï¿½Ï¢ï¿½ï¿½ï¿½Í·Å£ï¿½
+			header('Location:login2.php');
 			break;
 	    }
 ?>
